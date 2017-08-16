@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.Query;
 
 import ua.entity.Cafe;
 
-public interface CafeRepository extends JpaRepository<Cafe, Integer>{
+public interface CafeRepository extends JpaNameRepository<Cafe>{
 	@Query("From Cafe WHERE name=?1")
 	 Cafe findByName(String name);
 		
