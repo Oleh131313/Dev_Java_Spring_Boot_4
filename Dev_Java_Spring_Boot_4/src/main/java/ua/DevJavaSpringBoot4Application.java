@@ -10,8 +10,6 @@ import ua.repository.CafeRepository;
 public class DevJavaSpringBoot4Application {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext run = SpringApplication.run(DevJavaSpringBoot4Application.class, args);
-		CafeRepository repository = run.getBean(CafeRepository.class);
-		System.out.println(repository.findByName("addada"));
+		SpringApplication.run(DevJavaSpringBoot4Application.class, args);
 	}
 }
