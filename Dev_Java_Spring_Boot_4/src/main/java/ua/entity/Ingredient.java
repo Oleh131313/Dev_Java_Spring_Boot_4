@@ -15,7 +15,6 @@ public class Ingredient extends AbstractEntityName{
 	@ManyToMany(mappedBy="ingredients")
 	private List<Meal> meals = new ArrayList<>();
 
-
 	public List<Meal> getMeals() {
 		return meals;
 	}

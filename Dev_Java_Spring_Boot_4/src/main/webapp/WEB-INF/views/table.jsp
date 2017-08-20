@@ -6,7 +6,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-<title>Ingredient</title>
+<title>Table</title>
 </head>
 <body>
 	<div class="container">
@@ -17,12 +17,12 @@
 						<td class="text-center">Name</td>
 						<td class="text-center">Option</td>
 					</tr>
-					<c:forEach var="ingredient" items="${ingredients}">
+					<c:forEach var="table" items="${tables}">
 						<tr>
-							<td>${ingredient.name}</td>
+							<td>${table.countOfPeople}</td>
 							<td>
-								<a href="/admin/ingredient/update/${ingredient.id}" class="btn btn-outline-warning btn-sm">Update</a>
-								<a href="/admin/ingredient/delete/${ingredient.id}" class="btn btn-outline-danger btn-sm">Delete</a>
+								<a href="/admin/table/update/${table.id}" class="btn btn-outline-warning btn-sm">Update</a>
+								<a href="/admin/table/delete/${table.id}" class="btn btn-outline-danger btn-sm">Delete</a>
 							</td>
 						</tr>
 					</c:forEach>
