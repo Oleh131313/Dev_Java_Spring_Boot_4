@@ -40,6 +40,13 @@ public class Meal extends AbstractEntity{
 	@ManyToOne(fetch=FetchType.LAZY)
 	private Cafe cafe;
 	
+	public Meal() {
+	}
+
+	public Meal(String name) {
+		this.title=name;
+	}
+
 	public List<Order> getOrders() {
 		return orders;
 	}
