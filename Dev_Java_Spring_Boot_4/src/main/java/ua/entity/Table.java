@@ -15,6 +15,10 @@ public class Table extends AbstractEntity{
 	@ManyToOne(fetch=FetchType.LAZY)
 	private Cafe cafe;
 
+	public Table(Integer count) {
+	this.countOfPeople=count;
+	}
+
 	public int getCountOfPeople() {
 		return countOfPeople;
 	}
