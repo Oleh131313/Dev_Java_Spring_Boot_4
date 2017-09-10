@@ -2,7 +2,7 @@ package ua.service;
 
 import java.util.List;
 
-import ua.entity.Meal;
+import ua.model.request.MealRequest;
 import ua.model.view.MealView;
 
 public interface MealService {
@@ -13,8 +13,10 @@ public interface MealService {
 	
 	List<MealView> findAllViews();
 	
-	void save(Meal meal);
-	
 	void delete(Integer id);
+
+	void save(MealRequest request);
+	
+	MealRequest findOne(Integer id);
 	
 }
