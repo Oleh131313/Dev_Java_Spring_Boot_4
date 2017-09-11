@@ -11,6 +11,7 @@ import javax.persistence.FetchType;
 import javax.persistence.Lob;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 @Entity
@@ -36,7 +37,8 @@ public class Cafe extends AbstractEntityName{
 	@Column(length=13)
 	private String phone;
 	
-	private String email;
+	@ManyToOne(fetch=FetchType.LAZY)
+	private User user;
 	
 	@ManyToOne(fetch=FetchType.LAZY)
 	private OpenClose open;
@@ -104,12 +106,7 @@ public class Cafe extends AbstractEntityName{
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getEmail() {
-		return email;
-	}
-	public void setEmail(String email) {
-		this.email = email;
-	}
+	
 	public OpenClose getOpen() {
 		return open;
 	}
