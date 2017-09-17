@@ -19,19 +19,22 @@ public class RegistrationController {
 	public RegistrationController(UserService service) {
 		this.service = service;
 	}
+	
 	@GetMapping("/registration")
 	public String registration(Model model) {
 		model.addAttribute("registration", new RegistrationRequest());
 		return "registration";
 	}
+	
 	@PostMapping("/registration")
 	public String save(@ModelAttribute("registration") RegistrationRequest request) {
 		service.save(request);
 		return "redirect:/login";
 	}
+	
 	@GetMapping("/login")
 	public String login(Principal principal) {
-		if(principal==null)System.out.println(principal.getName());
+		if(principal!=null) System.out.println(principal.getName());
 		return "login";
 	}
 }

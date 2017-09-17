@@ -2,6 +2,7 @@
     pageEncoding="UTF-8"%>
 <%@ taglib prefix = "c" uri = "http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+
 <!DOCTYPE html >
 <html>
 <head>
@@ -12,6 +13,11 @@
 <body>
 	<div class="contaiter">
 		<div class="row">
+			<c:if test="${param.fail}">
+				<div class="col-12 text-center" style="color:red;">
+					Fail to authorize
+				</div>
+			</c:if>
 			<div class="col-12">
 				<form:form action="/login" method="POST">
 					<div class="form-group row">
