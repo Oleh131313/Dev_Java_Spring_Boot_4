@@ -1,6 +1,10 @@
 package ua.model.view;
 
 import java.math.BigDecimal;
+import java.util.ArrayList;
+import java.util.List;
+
+import ua.entity.Meal;
 
 public class CafeView {
 
@@ -27,6 +31,24 @@ public class CafeView {
 	private String open;
 	
 	private String close;
+	
+	List<Meal> meals = new ArrayList<>();
+	
+	
+	
+
+	public CafeView(Integer id, String name, String photoUrl, int version, String address, String fullDescription, String type, String phone, String open, String close) {
+		this.id = id;
+		this.name = name;
+		this.photoUrl = photoUrl;
+		this.version = version;
+		this.address = address;
+		this.fullDescription = fullDescription;
+		this.type = type;
+		this.phone = phone;
+		this.open = open;
+		this.close = close;
+	}
 
 	public Integer getId() {
 		return id;
@@ -123,4 +145,14 @@ public class CafeView {
 	public void setClose(String close) {
 		this.close = close;
 	}
+
+	public List<Meal> getMeals() {
+		return meals;
+	}
+
+	public void setMeals(List<Meal> meals) {
+		this.meals = meals;
+	}
+	
+	
 }
